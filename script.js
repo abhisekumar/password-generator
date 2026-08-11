@@ -209,6 +209,23 @@
   regenerateBtn.addEventListener("click", generatePassword);
   copyBtn.addEventListener("click", copyPassword);
 
+  document.addEventListener("keydown", function (event) {
+    if (event.target.matches("input, textarea, select, [contenteditable='true']")) {
+      return;
+    }
+    if (event.metaKey || event.ctrlKey || event.altKey) {
+      return;
+    }
+
+    if (event.key === "c" || event.key === "C") {
+      event.preventDefault();
+      copyPassword();
+    } else if (event.key === "r" || event.key === "R") {
+      event.preventDefault();
+      generatePassword();
+    }
+  });
+
   updateSliderProgress();
   setVisibility(true);
   generatePassword();
