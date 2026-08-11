@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Password Generator — Strong Secure Passwords Online</title>
+    <meta
+      name="description"
+      content="Free online password generator. Create strong, random passwords with length, symbols, numbers, and a strength meter. Runs locally in your browser — nothing is uploaded."
+    />
+    <meta
+      name="keywords"
+      content="password generator, strong password, secure password, random password, online password generator, free password tool"
+    />
+    <meta name="author" content="Abhisek Kumar" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://abhisekumar.github.io/password-generator/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Password Generator" />
+    <meta property="og:title" content="Free Password Generator — Strong Secure Passwords Online" />
+    <meta
+      property="og:description"
+      content="Create strong random passwords in your browser. Custom length, symbols, numbers, and strength meter. Private — nothing leaves your device."
+    />
+    <meta property="og:url" content="https://abhisekumar.github.io/password-generator/" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Free Password Generator — Strong Secure Passwords Online" />
+    <meta
+      name="twitter:description"
+      content="Create strong random passwords in your browser. Private, fast, and free."
+    />
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23111111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Password Generator",
+        "url": "https://abhisekumar.github.io/password-generator/",
+        "description": "Free online password generator that creates strong random passwords in the browser.",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Abhisek Kumar", "url": "https://github.com/abhisekumar" }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h1>Password Generator</h1>
+      </header>
+
+      <section class="password-box" aria-label="Generated password">
+        <input
+          id="password"
+          class="password-input"
+          type="text"
+          readonly
+          spellcheck="false"
+          aria-label="Generated password"
+        />
+        <div class="password-actions">
+          <button
+            type="button"
+            id="toggleVisibility"
+            class="icon-btn"
+            aria-label="Hide password"
+            title="Hide password"
+          >
+            <svg id="iconEyeOff" class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <line
+                x1="1"
+                y1="1"
+                x2="23"
+                y2="23"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <svg id="iconEye" class="icon hidden" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            id="regenerate"
+            class="icon-btn"
+            aria-label="Generate new password"
+            title="Generate new password"
+          >
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline
+                points="23 4 23 10 17 10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <polyline
+                points="1 20 1 14 7 14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            id="copy"
+            class="icon-btn"
+            aria-label="Copy password"
+            title="Copy password"
+          >
+            <svg id="iconCopy" class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <rect
+                x="9"
+                y="9"
+                width="13"
+                height="13"
+                rx="2"
+                ry="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <svg id="iconCheck" class="icon hidden" viewBox="0 0 24 24" aria-hidden="true">
+              <polyline
+                points="20 6 9 17 4 12"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Password options">
+        <div class="length-row">
+          <label for="length">Password Length: <span id="lengthValue">16</span></label>
+          <input
+            id="length"
+            type="range"
+            min="4"
+            max="64"
+            value="16"
+            aria-valuemin="4"
+            aria-valuemax="64"
+            aria-valuenow="16"
+          />
+        </div>
+
+        <div class="options">
+          <label class="option">
+            <span>Uppercase</span>
+            <input id="uppercase" type="checkbox" checked />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="option">
+            <span>Lowercase</span>
+            <input id="lowercase" type="checkbox" checked />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="option">
+            <span>Numbers</span>
+            <input id="numbers" type="checkbox" checked />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="option">
+            <span>Symbols</span>
+            <input id="symbols" type="checkbox" checked />
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="strength" aria-live="polite">
+        <div class="strength-label">
+          <svg class="strength-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Password Strength:</span>
+        </div>
+        <div
+          class="strength-bar"
+          role="meter"
+          aria-label="Password strength"
+          aria-valuemin="0"
+          aria-valuemax="4"
+          aria-valuenow="4"
+        >
+          <div id="strengthFill" class="strength-fill"></div>
+        </div>
+        <span id="strengthText" class="strength-text">Strong</span>
+      </section>
+    </main>
+
+    <footer class="seo-footer">
+      <p>
+        Free <strong>password generator</strong> for strong, random passwords.
+        Built by <a href="https://github.com/abhisekumar">Abhisek Kumar</a> ·
+        <a href="https://github.com/abhisekumar/password-generator">Source on GitHub</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abhisekumar.github.io/password-generator/sitemap.xml
